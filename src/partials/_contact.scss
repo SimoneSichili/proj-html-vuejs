@@ -1,0 +1,28 @@
+.contact {
+    width: 100%;
+    padding: 150px 0;
+    text-align: center;
+    background-image: url("../img/h-2-background-1.jpg");
+    @include background;
+    h2 {
+        @include title;
+        margin-bottom: 30px;
+        span {
+            @include titleItalic;
+        }
+    }
+    p {
+        margin-bottom: 40px;
+        font-size: 20px;
+        line-height: 1.5;
+        color: $greyText;
+    }
+    .btn {
+        display: inline-block;
+        padding: 20px 60px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+        background-color: $btnColor;
+    }
+}
