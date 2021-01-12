@@ -200,3 +200,60 @@ nav ul li .active::after {
   color: #000;
   background-color: #D8F0E3;
 }
+.contact .btn:hover {
+  color: #fff;
+  background-color: #E1C0B0;
+}
+
+.blog {
+  width: 100%;
+  padding: 150px 0;
+}
+.blog .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.blog .wrapper .article {
+  position: relative;
+  width: calc((100% / 3) - 15px);
+}
+.blog .wrapper .article .date {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  text-align: center;
+}
+.blog .wrapper .article .date .date-top {
+  width: 70px;
+  height: 50px;
+  line-height: 60px;
+  background-color: #C0E1CF;
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+.blog .wrapper .article .date .date-bottom {
+  width: 70px;
+  height: 40px;
+  line-height: 30px;
+  background-color: #F3D0C7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+}
+.blog .wrapper .article img {
+  display: block;
+  width: 100%;
+}
+.blog .wrapper .article h2 {
+  margin: 20px 0 10px 0;
+  font-size: 26px;
+  font-weight: 500;
+}
+.blog .wrapper .article span {
+  font-size: 15px;
+  font-style: italic;
+  font-family: "Crimson Text", serif;
+}

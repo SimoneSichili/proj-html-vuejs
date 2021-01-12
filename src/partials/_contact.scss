@@ -24,5 +24,9 @@
         text-decoration: none;
         color: #000;
         background-color: $btnColor;
+        &:hover {
+            color: #fff;
+            background-color: $btnHover;
+        }
     }
 }
