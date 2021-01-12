@@ -34,7 +34,7 @@ nav ul li a {
   text-decoration: none;
 }
 nav ul li img {
-  vertical-align: middle;
+  vertical-align: sub;
 }
 nav ul li:last-child {
   padding: 0 0 0 15px;
@@ -63,9 +63,32 @@ nav ul li .active::after {
   flex-wrap: wrap;
 }
 .gallery .card {
+  position: relative;
   width: calc(100% / 3);
+  cursor: pointer;
 }
 .gallery .card img {
   display: block;
   width: 100%;
+}
+.gallery .card .overlay {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 30px;
+  background-color: #fff;
+}
+.gallery .card .overlay h2 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.gallery .card .overlay h3 {
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  font-weight: 500;
+}
+.gallery .card:hover .overlay {
+  display: block;
 }
