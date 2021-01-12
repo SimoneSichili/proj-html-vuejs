@@ -92,3 +92,71 @@ nav ul li .active::after {
 .gallery .card:hover .overlay {
   display: block;
 }
+
+.process {
+  width: 100%;
+  padding: 120px 0;
+}
+.process h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 65px;
+  font-weight: 500;
+}
+.process h2 span {
+  font-family: "Crimson Text", serif;
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 700;
+}
+.process .wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  background-image: url("../svg/svg-3.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 80%;
+}
+.process .wrapper .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 4);
+  padding: 0 20px;
+}
+.process .wrapper .item .icon-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  background-color: #faf7f1;
+  border-radius: 100%;
+}
+.process .wrapper .item .icon-bg i {
+  font-size: 50px;
+}
+.process .wrapper .item h3 {
+  margin: 20px 0 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+.process .wrapper .item p {
+  color: #A6A6A6;
+  line-height: 1.5;
+}
+.process .wrapper .item:nth-child(1) i {
+  color: #badac9;
+}
+.process .wrapper .item:nth-child(2) i {
+  color: #f8d12d;
+}
+.process .wrapper .item:nth-child(3) i {
+  color: #80465f;
+}
+.process .wrapper .item:nth-child(4) i {
+  color: #eb6950;
+}
