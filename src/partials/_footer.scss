@@ -1,0 +1,40 @@
+footer {
+    padding: 80px 0;
+    background-color: $mainColor;
+    .wrapper {
+        display: flex;
+        .column {
+            width: calc(100% / 4);
+        }
+        .column:nth-child(1) {
+            img {
+                display: block;
+            }
+        }
+        .column:nth-child(2) {
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: #000;
+            }
+        }
+        .column:nth-child(4) {
+            ul {
+                display: flex;
+                li {
+                    margin-right: 30px;
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        i {
+                            font-size: 16px;
+                        }
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
