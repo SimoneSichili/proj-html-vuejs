@@ -21,12 +21,9 @@
         <nav>
             <a href="#"><img src="img/logo-sidearea-1.png" alt="Maree Logo"></a>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Elements</a></li>
+                <li v-for="(element, index) in navElements">
+                    <a href="#" :class="index == currentNavIndex ? 'active' : ''">{{element}}</a>
+                </li>
                 <li><img src="svg/svg-1.svg" alt="Hamburger"></li>
             </ul>
         </nav>
@@ -170,27 +167,41 @@
         <!-- articles -->
 
         <!-- footer -->
-        <footer>
+        <!-- <footer>
             <div class="wrapper">
                 <div class="column">
                     <a href="#"><img src="img/logo-sidearea-1.png" alt="Maree Logo"></a>
-                    <p class="margin-top">Let’s Get Creative</p>
+                    <p>Let’s Get Creative</p>
                 </div>
                 <div class="column">
                     <a href="#">maree.qode@gmail.com</a>
-                    <p class="margin-top">+44645 321 789</p>
+                    <p>+44645 321 789</p>
                 </div>
                 <div class="column">
                     <p>Avenue d’Auderghem 10</p>
-                    <p class="margin-top">1040 Brussels, Belgium</p>
+                    <p>1040 Brussels, Belgium</p>
                 </div>
                 <div class="column">
                     <p>Stay in touch with us</p>
-                    <ul class="margin-top">
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <ul>
+                        <li v-for="icon in socialIcons" v-html="icon"></li>
+                    </ul>
+                </div>
+            </div>
+        </footer> -->
+        <!-- footer -->
+
+        <!-- footer -->
+        <footer>
+            <div class="wrapper">
+                <div class="column" v-for="element in footerElements">
+                    <div v-html="element.top"></div>
+                    <div v-html="element.bottom"></div>
+                </div>
+                <div class="column">
+                    <p>Stay in touch with us</p>
+                    <ul>
+                        <li v-for="icon in socialIcons" v-html="icon"></li>
                     </ul>
                 </div>
             </div>

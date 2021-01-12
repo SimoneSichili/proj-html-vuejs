@@ -5,6 +5,9 @@ footer {
         display: flex;
         .column {
             width: calc(100% / 4);
+            div:first-child, p:first-child {
+                margin-bottom: 15px;
+            }
         }
         .column:nth-child(1) {
             img {

@@ -12,10 +12,6 @@
   margin: auto;
 }
 
-.margin-top {
-  margin-top: 15px;
-}
-
 nav {
   width: 100%;
   height: 100px;
@@ -271,6 +267,9 @@ footer .wrapper {
 }
 footer .wrapper .column {
   width: calc(100% / 4);
+}
+footer .wrapper .column div:first-child, footer .wrapper .column p:first-child {
+  margin-bottom: 15px;
 }
 footer .wrapper .column:nth-child(1) img {
   display: block;
