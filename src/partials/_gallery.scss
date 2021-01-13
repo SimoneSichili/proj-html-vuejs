@@ -11,13 +11,15 @@
             width: 100%;
         }
         .overlay {
-            display: none;
             position: absolute;
             top: 50%;
             left: 0;
             transform: translateY(-50%);
             padding: 30px;
             background-color: #fff;
+            transform: scaleX(0);
+            transform-origin: left;
+            opacity: 0;
             h2 {
                 font-weight: 500;
                 margin-bottom: 10px;
@@ -29,7 +31,10 @@
             }
         }
         &:hover .overlay {
-            display: block;
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: all .2s linear;
+            opacity: 1;
         }
     }
 }

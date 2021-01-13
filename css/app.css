@@ -216,13 +216,15 @@ nav ul li .active::after {
   width: 100%;
 }
 .gallery .card .overlay {
-  display: none;
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   padding: 30px;
   background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
 }
 .gallery .card .overlay h2 {
   font-weight: 500;
@@ -234,7 +236,10 @@ nav ul li .active::after {
   font-weight: 500;
 }
 .gallery .card:hover .overlay {
-  display: block;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: all 0.2s linear;
+  opacity: 1;
 }
 
 .process {
