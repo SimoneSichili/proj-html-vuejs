@@ -27,6 +27,7 @@
         &:hover {
             color: #fff;
             background-color: $btnHover;
+            transition: all .2s linear;
         }
     }
 }

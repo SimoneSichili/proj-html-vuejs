@@ -59,5 +59,11 @@ var app = new Vue(
                 },
             ]
         },
+        methods: {
+            scrollToTop: function() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        },
     }
 );

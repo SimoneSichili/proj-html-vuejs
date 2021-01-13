@@ -1,0 +1,61 @@
+#qode {
+    position: fixed;
+    top: 150px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: $widget;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    svg {
+        height: 70%;
+    }
+    &:hover {
+        background-color: darken($widget, 10%);
+    }
+}
+
+#cart {
+    position: fixed;
+    top: 200px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    fill: $widget;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    svg {
+        height: 50%;
+    }
+    &:hover {
+        fill: darken($widget, 10%);
+    }
+}
+
+#to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: $mainColor;
+    cursor: pointer;
+    i {
+        font-size: 20px;
+    }
+    &:hover {
+        background-color: darken($mainColor, 10%);
+    }
+}
