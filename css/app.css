@@ -38,16 +38,22 @@ nav ul li a {
   color: #000;
   text-decoration: none;
 }
-nav ul li a:hover::after {
+nav ul li a::after {
   content: "";
   width: calc(100% - 50px);
   height: 7px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: scaleX(0) translate(-50%, 0);
+  transform-origin: left;
   background-color: #D8F0E3;
   z-index: -1;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1) translate(-50%, 0);
+  transform-origin: left;
+  transition: all 0.1s linear;
 }
 nav ul li img {
   vertical-align: sub;
@@ -159,29 +165,39 @@ nav ul li .active::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   color: #fff;
   background-color: #F3D0C7;
-  cursor: pointer;
+  z-index: 2;
   left: 40px;
+}
+.jumbotron .prev:hover {
+  cursor: pointer;
+  background-color: #E1C0B0;
 }
 .jumbotron .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   color: #fff;
   background-color: #F3D0C7;
-  cursor: pointer;
+  z-index: 2;
   right: 40px;
+}
+.jumbotron .next:hover {
+  cursor: pointer;
+  background-color: #E1C0B0;
 }
 .jumbotron .dots {
   position: absolute;
@@ -451,17 +467,17 @@ footer .wrapper .column:nth-child(4) ul li a:hover {
 
 #qode {
   position: fixed;
-  top: 150px;
   right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  color: #fff;
-  background-color: #ef2853;
   cursor: pointer;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  top: 150px;
+  color: #fff;
+  background-color: #ef2853;
 }
 #qode svg {
   height: 70%;
@@ -472,37 +488,39 @@ footer .wrapper .column:nth-child(4) ul li a:hover {
 
 #cart {
   position: fixed;
-  top: 200px;
   right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  fill: #ef2853;
-  background-color: #fff;
   cursor: pointer;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  top: 200px;
+  fill: #ef2853;
+  background-color: #fff;
 }
 #cart svg {
   height: 50%;
 }
 #cart:hover {
-  fill: #d4103a;
+  background-color: #f2f2f2;
 }
 
 #to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: block;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  bottom: 20px;
+  right: 20px;
   color: #fff;
   background-color: #C0E1CF;
-  cursor: pointer;
 }
 #to-top i {
   font-size: 20px;
