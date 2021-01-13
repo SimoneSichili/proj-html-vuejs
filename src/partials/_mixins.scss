@@ -40,3 +40,17 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@mixin chevron {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    background-color: $navActive;
+}

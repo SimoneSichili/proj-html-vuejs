@@ -22,7 +22,7 @@
             <a href="#"><img src="img/logo-sidearea-1.png" alt="Maree Logo"></a>
             <ul>
                 <li v-for="(element, index) in navElements">
-                    <a href="#" :class="index == currentNavIndex ? 'active' : ''">{{element}}</a>
+                    <a :href="element.url" :class="index == currentNavIndex ? 'active' : ''">{{element.text}}</a>
                 </li>
                 <li><img src="svg/svg-1.svg" alt="Hamburger"></li>
             </ul>
@@ -31,7 +31,34 @@
 
         <!-- jumbotron -->
         <section class="jumbotron">
-
+            <!-- prev button -->
+            <div class="prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <!-- slider -->
+            <div class="slider">
+                <div class="wrapper">
+                    <!-- <div class="image1">
+                        <img src="https://wallpapercave.com/wp/XMnhQSq.jpg" alt="">
+                    </div>
+                    <div class="image2">
+                        <img src="https://wallpapercave.com/wp/YKJtSPc.jpg" alt="">        
+                    </div>
+                    <div class="image3">
+                        <img src="ttps://wonderfulengineering.com/wp-content/uploads/2014/07/Landscape-wallpapers-21.jpg" alt="">        
+                    </div> -->
+                </div>
+            </div>
+            <!-- next button -->
+            <div class="next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <!-- nav dots -->
+            <div class="dots">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+            </div>
         </section>
         <!-- jumbotron -->
 
@@ -194,14 +221,20 @@
         <!-- footer -->
         <footer>
             <div class="wrapper">
+                <div class="column">
+                    <a href="#"><img src="img/logo-sidearea-1.png" alt="Maree Logo"></a>
+                    <p>Let’s Get Creative</p>
+                </div>
                 <div class="column" v-for="element in footerElements">
-                    <div v-html="element.top"></div>
-                    <div v-html="element.bottom"></div>
+                    <p>{{element.top}}</p>
+                    <p>{{element.bottom}}</p>
                 </div>
                 <div class="column">
                     <p>Stay in touch with us</p>
                     <ul>
-                        <li v-for="icon in socialIcons" v-html="icon"></li>
+                        <li v-for="icon in socialIcons">
+                            <a :href="icon.url"><i class='fab' :class="icon.class"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>

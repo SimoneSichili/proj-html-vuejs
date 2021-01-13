@@ -5,31 +5,57 @@ var app = new Vue(
             icona: "<i class='fab fa-twitter'></i>",
             currentNavIndex: 0,
             navElements: [
-                "Home",
-                "Pages",
-                "Portfolio",
-                "Blog",
-                "Shop",
-                "Elements"
+                {
+                    url: "#",
+                    text: "Home"
+                },
+                {
+                    url: "#",
+                    text: "Pages"
+                },
+                {
+                    url: "#",
+                    text: "Portfolio"
+                },
+                {
+                    url: "#",
+                    text: "Blog"
+                },
+                {
+                    url: "#",
+                    text: "Shop"
+                },
+                {
+                    url: "#",
+                    text: "Elements"
+                },
             ],
             socialIcons: [
-                "<a href='#'><i class='fab fa-twitter'></i></a>",
-                "<a href='#'><i class='fab fa-pinterest-p'></i></a>",
-                "<a href='#'><i class='fab fa-facebook-f'></i></a>",
-                "<a href='#'><i class='fab fa-linkedin-in'></i></a>"
+                {
+                    url: "https://twitter.com/",
+                    class: "fa-twitter"
+                },
+                {
+                    url: "https://www.pinterest.com/",
+                    class: "fa-pinterest-p"
+                },
+                {
+                    url: "https://www.facebook.com/",
+                    class: "fa-facebook-f"
+                },
+                {
+                    url: "https://www.linkedin.com/",
+                    class: "fa-linkedin-in"
+                }
             ],
             footerElements: [
                 {
-                    top: '<a href="#"><img src="img/logo-sidearea-1.png" alt="Maree Logo"></a>',
-                    bottom: '<p>Let’s Get Creative</p>'
+                    top: 'maree.qode@gmail.com',
+                    bottom: '+44645 321 789'
                 },
                 {
-                    top: '<a href="#">maree.qode@gmail.com</a>',
-                    bottom: '<p>+44645 321 789</p>'
-                },
-                {
-                    top: '<p>Avenue d’Auderghem 10</p>',
-                    bottom: '<p>1040 Brussels, Belgium</p>'
+                    top: 'Avenue d’Auderghem 10',
+                    bottom: '1040 Brussels, Belgium'
                 },
             ]
         },
