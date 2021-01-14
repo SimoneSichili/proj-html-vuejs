@@ -79,46 +79,11 @@
 
         <!-- GALLERY -->
         <section class="gallery">
-            <div class="card">
-                <img src="img/h-2-port-img-1.jpg" alt="Illustration">
+            <div class="card" v-for="card in galleryCards">
+                <img :src="card.imgUrl" alt="Illustration">
                 <div class="overlay">
-                    <h2>All these illustrations</h2>
-                    <h3>Illustration</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/h-2-port-img-2.jpg" alt="Illustration">
-                <div class="overlay">
-                    <h2>Type and illustrations</h2>
-                    <h3>Illustration</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/h-2-port-img-3.jpg" alt="Illustration">
-                <div class="overlay">
-                    <h2>Draw and illustrate</h2>
-                    <h3>Illustration</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/h-2-port-img-4.jpg" alt="Illustration">
-                <div class="overlay">
-                    <h2>Illustrations of novels</h2>
-                    <h3>Illustration</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/h-2-port-img-5.jpg" alt="Illustration">
-                <div class="overlay">
-                    <h2>Dreams are illustrations</h2>
-                    <h3>Illustration</h3>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/h-2-port-img-6.jpg" alt="Illustration">
-                <div class="overlay">
-                    <h2>Illustration of novels</h2>
-                    <h3>Illustration</h3>
+                    <h2>{{card.title}}</h2>
+                    <h3>{{card.subtitle}}</h3>
                 </div>
             </div>
         </section>
@@ -128,36 +93,12 @@
         <section class="process">
             <h2>Working <span>process</span></h2>
             <div class="wrapper">
-                <div class="item">
+                <div class="item" v-for="element in processElements">
                     <div class="icon-bg">
-                        <i class="fas fa-lightbulb"></i>
+                        <i :class="element.icon"></i>
                     </div>
-                    <h3>First theres an idea</h3>
-                    <p>Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
-                </div>
-
-                <div class="item">
-                    <div class="icon-bg">
-                        <i class="far fa-comment"></i>
-                    </div>
-                    <h3>First theres an idea</h3>
-                    <p>Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
-                </div>
-
-                <div class="item">
-                    <div class="icon-bg">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>First theres an idea</h3>
-                    <p>Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
-                </div>
-
-                <div class="item">
-                    <div class="icon-bg">
-                        <i class="fas fa-pencil-ruler"></i>
-                    </div>
-                    <h3>First theres an idea</h3>
-                    <p>Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
+                    <h3>{{ element.title }}</h3>
+                    <p>{{ element.paragraph }}</p>
                 </div>
             </div>
         </section>
@@ -177,38 +118,16 @@
         <!-- BLOG -->
         <section class="blog">
             <div class="wrapper">
-                <div class="article">
+                <div class="article" v-for="article in blogArticles">
                     <div class="date">
-                        <div class="date-top">07</div>
-                        <div class="date-bottom">MAY '19</div>
+                        <div class="date-top">{{article.dateTop}}</div>
+                        <div class="date-bottom">{{article.dateBottom}}</div>
                     </div>
                     <div class="picture">
-                        <a href="#"><img src="img/h-2-blog-img-1.jpg" alt="Article"></a>
+                        <a :href="article.url"><img :src="article.imgUrl" alt="Article"></a>
                     </div>
-                    <h2>This way, loves: a detailed guide through new design</h2>
-                    <span>By Emily Fields</span>
-                </div>
-                <div class="article">
-                    <div class="date">
-                        <div class="date-top">07</div>
-                        <div class="date-bottom">MAY '19</div>
-                    </div>
-                    <div class="picture">
-                        <a href="#"><img src="img/h-2-blog-img-2.jpg" alt="Article"></a>
-                    </div>
-                    <h2>I try to give people a different way of looking art</h2>
-                    <span>By Emily Fields</span>
-                </div>
-                <div class="article">
-                    <div class="date">
-                        <div class="date-top">07</div>
-                        <div class="date-bottom">MAY '19</div>
-                    </div>
-                    <div class="picture">
-                        <a href="#"><img src="img/h-2-blog-img-3.jpg" alt="Article"></a>
-                    </div>
-                    <h2>Introduce Richard Laperrière of those amazing features</h2>
-                    <span>By Emily Fields</span>
+                    <h2>{{article.title}}</h2>
+                    <span>{{article.author}}</span>
                 </div>
             </div>
         </section>

@@ -11,3 +11,8 @@
     max-width: 1200px;
     margin: auto;
 }
+
+::selection {
+    color: #000;
+    background-color: $mainColor;
+}
