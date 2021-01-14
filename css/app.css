@@ -56,10 +56,10 @@ nav > ul > li > a::after {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: -1;
   transform: scaleX(0) translate(-50%, 0);
   transform-origin: left;
   background-color: #D8F0E3;
-  z-index: -1;
 }
 nav > ul > li:hover a::after {
   transform: scaleX(1) translate(-50%, 0);
@@ -129,9 +129,9 @@ nav > ul > li .active::after {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: -1;
   transform: translate(-50%, 0);
   background-color: #F3D0C7;
-  z-index: -1;
 }
 
 .jumbotron {
