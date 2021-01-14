@@ -4,6 +4,7 @@ var app = new Vue(
         data: {
             currentNavIndex: 0,
             currentItem: null,
+            currentImage: 0,
             logo: {
                 url: "#",
                 imgUrl: "img/logo-sidearea-1.png",
@@ -290,7 +291,21 @@ var app = new Vue(
             },
             showDropdown: function(itemIndex) {
                 this.currentItem = itemIndex;
-              },
+            },
+            nextImage: function () {
+                this.currentImage++;
+
+                if(this.currentImage > 2) {
+                    this.currentImage = 0
+                }
+            },
+            prevImage: function () {
+                this.currentImage--;
+
+                if(this.currentImage < 0) {
+                    this.currentImage = 2
+                }
+            },
         },
     }
 );

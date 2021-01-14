@@ -4,7 +4,7 @@
     height: 630px;
     padding: 100px 0;
     .slider {
-        .image1 {
+        .image {
             position: relative;
             .text {
                 width: 45%;
@@ -36,47 +36,139 @@
                     }
                 }
             }
-            .illustration {
+            .illustration1 {
                 position: absolute;
                 bottom: -50px;
                 right: 100px;
                 z-index: -1;
-                #slider2 {
+                #slider1-1 {
+                    position: absolute;
+                    right: 750px;
+                    bottom: 40px;
+                }
+                #slider1-2 {
+                    position: absolute;
+                    right: 750px;
+                    bottom: 300px;
+                }
+                #slider1-3 {
+                    position: absolute;
+                    right: 200px;
+                    bottom: 0;
+                }
+                #slider1-4 {
+                    position: absolute;
+                    right: 100px;
+                    bottom: 400px;
+                }
+                #slider1-5 {
+                    position: absolute;
+                    right: 50px;
+                    bottom: 400px;
+                }
+                #slider1-6 {
+                    position: absolute;
+                    right: 130px;
+                    bottom: 300px;
+                }
+                #slider1-7 {
+                    position: absolute;
+                    right: 680px;
+                    bottom: 40px;
+                }
+                #slider1-8 {
+                    position: absolute;
+                    right: 180px;
+                    bottom: 40px;
+                }
+                #slider1-9 {
+                    position: absolute;
+                    right: 50px;
+                    bottom: 40px;
+                } 
+                #slider1-10 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 40px;
+                }       
+            }
+            .illustration2 {
+                position: absolute;
+                bottom: -80px;
+                right: 100px;
+                z-index: -1;
+                #slider2-2 {
+                    position: absolute;
+                    right: 750px;
+                    bottom: 380px;
+                }
+                #slider2-6 {
+                    position: absolute;
+                    right: 100px;
+                    bottom: 500px;
+                }
+                #slider2-11 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+                #slider2-12 {
+                    position: absolute;
+                    right: 780px;
+                    bottom: 100px;
+                }
+                #slider2-13 {
+                    position: absolute;
+                    right: 700px;
+                    bottom: 20px;
+                }
+                #slider2-14 {
+                    position: absolute;
+                    right: 80px;
+                    bottom: 20px;
+                }    
+            }
+            .illustration3 {
+                position: absolute;
+                bottom: -50px;
+                right: 100px;
+                z-index: -1;
+                #slider3-2 {
                     position: absolute;
                     right: 700px;
                     bottom: 420px;
                 }
-                #slider6 {
+                #slider3-6 {
                     position: absolute;
                     right: 100px;
                     bottom: 300px;
                 }
-                #slider12 {
+                #slider3-12 {
                     position: absolute;
                     right: 830px;
                     bottom: 200px;
                 }
-                #slider13 {
+                #slider3-13 {
                     position: absolute;
                     right: 780px;
                     bottom: 0;
                 }
-                #slider14 {
+                #slider3-14 {
                     position: absolute;
                     right: 150px;
                     bottom: 450px;
                 }
-                #slider15 {
+                #slider3-15 {
                     position: absolute;
                     right: 400px;
                     bottom: 0;
                 }
-                #slider16 {
+                #slider3-16 {
                     position: absolute;
                     right: 100px;
                     bottom: 0;
                 }
-                #slider17 {
+                #slider3-17 {
                     position: absolute;
                     right: 0;
                     bottom: 0;
@@ -101,12 +193,19 @@
             margin: 0 10px;
             font-size: 10px;
             color: $navActive;
+            cursor: pointer;
+        }
+        .scale {
+            transform: scale(1.5);
+            transition: all .2s linear;
         }
     }
 }
 
 @media screen and (max-width: 1200px) {
-    .jumbotron .slider .image1 .illustration {
+    .jumbotron .slider .image .illustration1,
+    .jumbotron .slider .image .illustration2,
+    .jumbotron .slider .image .illustration3 {
         right: 0;
         transform: scale(.8);
     }
