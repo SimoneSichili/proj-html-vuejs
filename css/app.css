@@ -76,6 +76,9 @@ nav > ul > li .dropdown {
   padding: 20px 60px 20px 20px;
   background-color: #FAF7F1;
   z-index: 1;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 nav > ul > li .dropdown ul {
   flex-direction: column;
@@ -106,6 +109,12 @@ nav > ul > li .dropdown ul li:hover a::after {
   transform: scaleX(1) translate(-50%, 0);
   transform-origin: left;
   transition: all 0.1s linear;
+}
+nav > ul > li .drop {
+  visibility: visible;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: all 0.15s linear;
 }
 nav > ul > li img {
   vertical-align: sub;

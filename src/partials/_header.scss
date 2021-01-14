@@ -47,6 +47,9 @@ nav {
                 padding: 20px 60px 20px 20px;
                 background-color: $dropdownBg;
                 z-index: 1;
+                visibility: hidden;
+                transform: scaleY(0);
+                transform-origin: top;
                 ul {
                     flex-direction: column;
                     li {
@@ -77,6 +80,12 @@ nav {
                         }
                     }
                 }
+            }
+            .drop {
+                visibility: visible;
+                transform: scaleY(1);
+                transform-origin: top;
+                transition: all .15s linear;
             }
             img {
                 vertical-align: sub;

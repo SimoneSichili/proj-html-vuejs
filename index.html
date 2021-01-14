@@ -17,6 +17,7 @@
 <body>
     <div id="root">
 
+        <!-- v-show="currentItem == index" -->
         <!-- NAVBAR -->
         <nav>
             <a :href="logo.url"><img :src="logo.imgUrl" :alt="logo.alt"></a>
@@ -26,7 +27,7 @@
                 @mouseenter="showDropdown(index)" 
                 @mouseleave="currentItem = null">
                     <a :href="element.url" :class="index == currentNavIndex ? 'active' : ''">{{element.text}}</a>
-                    <div class="dropdown" v-show="currentItem == index" v-if="element.dropdownItems != null">
+                    <div class="dropdown" :class="currentItem == index ? 'drop' : ''" v-if="element.dropdownItems != null">
                         <ul>
                             <li v-for="item in element.dropdownItems">
                                 <a :href="item.url">{{item.text}}</a>
