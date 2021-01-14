@@ -3,6 +3,11 @@ var app = new Vue(
         el: '#root',
         data: {
             currentNavIndex: 0,
+            logo: {
+                url: "#",
+                imgUrl: "img/logo-sidearea-1.png",
+                alt: "Maree Logo"
+            },
             navElements: [
                 {
                     url: "#",
@@ -141,7 +146,7 @@ var app = new Vue(
         methods: {
             scrollToTop: function() {
                 document.documentElement.scrollTop = 0;
-            }
+            },
         },
     }
 );

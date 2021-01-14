@@ -19,7 +19,7 @@
 
         <!-- NAVBAR -->
         <nav>
-            <a href="#"><img src="img/logo-sidearea-1.png" alt="Maree Logo"></a>
+            <a :href="logo.url"><img :src="logo.imgUrl" :alt="logo.alt"></a>
             <ul>
                 <li v-for="(element, index) in navElements">
                     <a :href="element.url" :class="index == currentNavIndex ? 'active' : ''">{{element.text}}</a>
@@ -37,32 +37,26 @@
             </div>
             <!-- slider -->
             <div class="slider">
-                    <div class="image1">
-                        <div class="wrapper">
-                            <div class="text">
-                                <h2>Devotion that<br>
-                                    never <span>ends</span></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur ducimus dolorem commodi!</p>
-                                <a href="#">Read More</a>
-                            </div>
+                <div class="image1">
+                    <div class="wrapper">
+                        <div class="text">
+                            <h2>Devotion that<br>
+                                never <span>ends</span></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur ducimus dolorem commodi!</p>
+                            <a href="#">Read More</a>
                         </div>
-                        <div class="illustration">
-                            <img id="slider2" src="img/short-slider-rev-1-img-2.png" alt="Slider-2">
-                            <img id="slider6" src="img/short-slider-rev-1-img-6.png" alt="Slider-6">
-                            <img id="slider12" src="img/h-2-slider-img-12.png" alt="Slider-12">     
-                            <img id="slider13" src="img/h-2-slider-img-13.png" alt="Slider-13">
-                            <img id="slider14" src="img/h-2-slider-img-14.png" alt="Slider-14">
-                            <img id="slider15" src="img/h-2-slider-img-15.png" alt="Slider-15">
-                            <img id="slider16" src="img/h-2-slider-img-16.png" alt="Slider-16">
-                            <img id="slider17" src="img/h-2-slider-img-17.png" alt="Slider-17">
-                        </div>        
                     </div>
-                    <!-- <div class="image2">
-                        <img src="https://wallpapercave.com/wp/YKJtSPc.jpg" alt="">        
-                    </div>
-                    <div class="image3">
-                        <img src="ttps://wonderfulengineering.com/wp-content/uploads/2014/07/Landscape-wallpapers-21.jpg" alt="">        
-                    </div> -->
+                    <div class="illustration">
+                        <img id="slider2" src="img/short-slider-rev-1-img-2.png" alt="Slider-2">
+                        <img id="slider6" src="img/short-slider-rev-1-img-6.png" alt="Slider-6">
+                        <img id="slider12" src="img/h-2-slider-img-12.png" alt="Slider-12">     
+                        <img id="slider13" src="img/h-2-slider-img-13.png" alt="Slider-13">
+                        <img id="slider14" src="img/h-2-slider-img-14.png" alt="Slider-14">
+                        <img id="slider15" src="img/h-2-slider-img-15.png" alt="Slider-15">
+                        <img id="slider16" src="img/h-2-slider-img-16.png" alt="Slider-16">
+                        <img id="slider17" src="img/h-2-slider-img-17.png" alt="Slider-17">
+                    </div>        
+                </div>
             </div>
             <!-- next button -->
             <div class="next">
