@@ -30,7 +30,7 @@ nav {
   align-items: center;
   padding: 0 40px;
 }
-nav ul {
+nav > ul {
   display: flex;
   height: 100%;
   line-height: 100px;
@@ -38,17 +38,18 @@ nav ul {
   font-size: 15px;
   font-weight: 700;
 }
-nav ul li {
+nav > ul > li {
   position: relative;
   height: 100%;
   padding: 0 30px;
   text-transform: uppercase;
+  cursor: pointer;
 }
-nav ul li a {
+nav > ul > li > a {
   color: #000;
   text-decoration: none;
 }
-nav ul li a::after {
+nav > ul > li > a::after {
   content: "";
   width: calc(100% - 50px);
   height: 7px;
@@ -60,18 +61,59 @@ nav ul li a::after {
   background-color: #D8F0E3;
   z-index: -1;
 }
-nav ul li a:hover::after {
+nav > ul > li:hover a::after {
   transform: scaleX(1) translate(-50%, 0);
   transform-origin: left;
   transition: all 0.1s linear;
 }
-nav ul li img {
+nav > ul > li .dropdown {
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 20px 60px 20px 20px;
+  background-color: #FAF7F1;
+  z-index: 1;
+}
+nav > ul > li .dropdown ul {
+  flex-direction: column;
+}
+nav > ul > li .dropdown ul li {
+  padding: 0;
+  line-height: 2.5;
+  text-transform: initial;
+}
+nav > ul > li .dropdown ul li a {
+  position: relative;
+  color: #A6A6A6;
+  text-decoration: none;
+}
+nav > ul > li .dropdown ul li a::after {
+  content: "";
+  width: 110%;
+  height: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scaleX(0) translate(-50%, 0);
+  transform-origin: left;
+  background-color: #D8F0E3;
+  z-index: -1;
+}
+nav > ul > li .dropdown ul li:hover a::after {
+  transform: scaleX(1) translate(-50%, 0);
+  transform-origin: left;
+  transition: all 0.1s linear;
+}
+nav > ul > li img {
   vertical-align: sub;
 }
-nav ul li:last-child {
+nav > ul > li:last-child {
   padding: 0 0 0 15px;
 }
-nav ul li .active::after {
+nav > ul > li .active::after {
   content: "";
   width: calc(100% - 50px);
   height: 7px;

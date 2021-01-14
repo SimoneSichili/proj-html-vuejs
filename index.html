@@ -21,8 +21,18 @@
         <nav>
             <a :href="logo.url"><img :src="logo.imgUrl" :alt="logo.alt"></a>
             <ul>
-                <li v-for="(element, index) in navElements">
+                <li 
+                v-for="(element, index) in navElements" 
+                @mouseenter="showDropdown(index)" 
+                @mouseleave="currentItem = null">
                     <a :href="element.url" :class="index == currentNavIndex ? 'active' : ''">{{element.text}}</a>
+                    <div class="dropdown" v-show="currentItem == index" v-if="element.dropdownItems != null">
+                        <ul>
+                            <li v-for="item in element.dropdownItems">
+                                <a :href="item.url">{{item.text}}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li><img src="svg/svg-1.svg" alt="Hamburger"></li>
             </ul>

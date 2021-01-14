@@ -3,6 +3,7 @@ var app = new Vue(
         el: '#root',
         data: {
             currentNavIndex: 0,
+            currentItem: null,
             logo: {
                 url: "#",
                 imgUrl: "img/logo-sidearea-1.png",
@@ -11,11 +12,91 @@ var app = new Vue(
             navElements: [
                 {
                     url: "#",
-                    text: "Home"
+                    text: "Home",
+                    dropdownItems: [
+                        {
+                            url: "#",
+                            text: "Main Home"
+                        },
+                        {
+                            url: "#",
+                            text: "Floating Portfolio"
+                        },
+                        {
+                            url: "#",
+                            text: "Portfolio Pinterest"
+                        },
+                        {
+                            url: "#",
+                            text: "Animated Slider"
+                        },
+                        {
+                            url: "#",
+                            text: "Portfolio Metro"
+                        },
+                        {
+                            url: "#",
+                            text: "Portfolio Gallery"
+                        },
+                        {
+                            url: "#",
+                            text: "Interactive Links"
+                        },
+                        {
+                            url: "#",
+                            text: "Split Slider Showcase"
+                        },
+                        {
+                            url: "#",
+                            text: "Portfolio Carousel"
+                        },
+                        {
+                            url: "#",
+                            text: "Landing"
+                        },   
+                    ],
                 },
                 {
                     url: "#",
-                    text: "Pages"
+                    text: "Pages",
+                    dropdownItems: [
+                        {
+                            url: "#",
+                            text: "About Us"
+                        },
+                        {
+                            url: "#",
+                            text: "About Me"
+                        },
+                        {
+                            url: "#",
+                            text: "What We Offer"
+                        },
+                        {
+                            url: "#",
+                            text: "Working process"
+                        },
+                        {
+                            url: "#",
+                            text: "Our Team"
+                        },
+                        {
+                            url: "#",
+                            text: "Pricing Plans"
+                        },
+                        {
+                            url: "#",
+                            text: "Contact Us"
+                        },
+                        {
+                            url: "#",
+                            text: "Coming Soon"
+                        },
+                        {
+                            url: "#",
+                            text: " 404 Error Page"
+                        }, 
+                    ],                   
                 },
                 {
                     url: "#",
@@ -23,11 +104,71 @@ var app = new Vue(
                 },
                 {
                     url: "#",
-                    text: "Blog"
+                    text: "Blog",
+                    dropdownItems: [
+                        {
+                            url: "#",
+                            text: "Right Sidebar"
+                        },
+                        {
+                            url: "#",
+                            text: "Left Sidebar"
+                        },
+                        {
+                            url: "#",
+                            text: "Centered"
+                        },
+                        {
+                            url: "#",
+                            text: "Post Types"
+                        },
+                    ], 
                 },
                 {
                     url: "#",
-                    text: "Shop"
+                    text: "Shop",
+                    dropdownItems: [
+                        {
+                            url: "#",
+                            text: "Product List"
+                        },
+                        {
+                            url: "#",
+                            text: "Product Single"
+                        },
+                        {
+                            url: "#",
+                            text: "Shop Layouts"
+                        },
+                        {
+                            url: "#",
+                            text: "Three Columns"
+                        },
+                        {
+                            url: "#",
+                            text: "Three Columns Wide"
+                        },
+                        {
+                            url: "#",
+                            text: "Four Columns"
+                        },
+                        {
+                            url: "#",
+                            text: "Four Columns Wide"
+                        },
+                        {
+                            url: "#",
+                            text: "Five Columns"
+                        },
+                        {
+                            url: "#",
+                            text: "Five Columns Wide"
+                        },
+                        {
+                            url: "#",
+                            text: "Shop Pages"
+                        },
+                    ],
                 },
                 {
                     url: "#",
@@ -147,6 +288,10 @@ var app = new Vue(
             scrollToTop: function() {
                 document.documentElement.scrollTop = 0;
             },
+            showDropdown: function(itemIndex) {
+                this.currentItem = itemIndex;
+              },
         },
     }
 );
+
