@@ -178,7 +178,8 @@ var app = new Vue(
             ],
             sliderElements: [
                 {
-                    title: "Projects made with <span>love</span>",
+                    title: "Projects made with ",
+                    titleEm: "love",
                     paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur ducimus dolorem commodi!",
                     btnUrl: "#",
                     class: "illustration1",
@@ -236,7 +237,8 @@ var app = new Vue(
                     ],
                 },
                 {
-                    title: "Our full folio full of <span>joy</span>",
+                    title: "Our full folio full of ",
+                    titleEm: "joy",
                     paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur ducimus dolorem commodi!",
                     btnUrl: "#",
                     class: "illustration2",
@@ -274,7 +276,8 @@ var app = new Vue(
                     ],
                 },
                 {
-                    title: "Devotion that never <span>ends</span>",
+                    title: "Devotion that never ",
+                    titleEm: "ends",
                     paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur ducimus dolorem commodi!",
                     btnUrl: "#",
                     class: "illustration3",

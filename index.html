@@ -51,7 +51,7 @@
                 <div class="image" v-for="(element, index) in sliderElements" v-show="currentImage == index">
                     <div class="wrapper">
                         <div class="text">
-                            <h2 v-html="element.title"></h2>
+                            <h2>{{element.title}}<span>{{element.titleEm}}</span></h2>
                             <p>{{element.paragraph}}</p>
                             <a :href="element.btnUrl">Read More</a>
                         </div>
