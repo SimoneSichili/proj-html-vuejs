@@ -597,16 +597,23 @@ footer .wrapper {
 footer .wrapper .column {
   width: calc(100% / 4);
 }
-footer .wrapper .column *:first-child {
+footer .wrapper .column ul {
+  list-style: none;
+}
+footer .wrapper .column ul li:first-child {
   margin-bottom: 15px;
 }
 footer .wrapper .column:nth-child(1) img {
   display: block;
+  margin-bottom: 15px;
 }
 footer .wrapper .column:nth-child(2) a {
   display: inline-block;
   text-decoration: none;
   color: #000;
+}
+footer .wrapper .column:nth-child(4) p {
+  margin-bottom: 15px;
 }
 footer .wrapper .column:nth-child(4) ul {
   display: flex;

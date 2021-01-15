@@ -135,12 +135,14 @@
         <footer>
             <div class="wrapper">
                 <div class="column">
-                    <a href="#"><img src="img/logo-sidearea-1.png" alt="Maree Logo"></a>
+                    <a :href="logo.url"><img :src="logo.imgUrl" :alt="logo.alt"></a>
                     <p>Let’s Get Creative</p>
                 </div>
                 <div class="column" v-for="element in footerElements">
-                    <p>{{element.top}}</p>
-                    <p>{{element.bottom}}</p>
+                    <ul>
+                        <li>{{element.top}}</li>
+                        <li>{{element.bottom}}</li>
+                    </ul>
                 </div>
                 <div class="column">
                     <p>Stay in touch with us</p>
