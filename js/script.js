@@ -176,6 +176,152 @@ var app = new Vue(
                     text: "Elements"
                 },
             ],
+            sliderElements: [
+                {
+                    title: "Projects made with <span>love</span>",
+                    paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur ducimus dolorem commodi!",
+                    btnUrl: "#",
+                    class: "illustration1",
+                    images: [
+                        {
+                            id: "slider1-1",
+                            imgUrl: "img/short-slider-rev-1-img-1.png",
+                            alt: "Slider-1-1"
+                        },
+                        {
+                            id: "slider1-2",
+                            imgUrl: "img/short-slider-rev-1-img-2.png",
+                            alt: "Slider-1-2"
+                        },
+                        {
+                            id: "slider1-3",
+                            imgUrl: "img/short-slider-rev-1-img-3.png",
+                            alt: "Slider-1-3"
+                        },
+                        {
+                            id: "slider1-5",
+                            imgUrl: "img/short-slider-rev-1-img-5.png",
+                            alt: "Slider-1-5"
+                        },
+                        {
+                            id: "slider1-4",
+                            imgUrl: "img/short-slider-rev-1-img-4.png",
+                            alt: "Slider-1-4"
+                        },
+                        {
+                            id: "slider1-6",
+                            imgUrl: "img/short-slider-rev-1-img-6.png",
+                            alt: "Slider-1-6"
+                        },
+                        {
+                            id: "slider1-7",
+                            imgUrl: "img/short-slider-rev-1-img-7.png",
+                            alt: "Slider-1-7"
+                        },
+                        {
+                            id: "slider1-8",
+                            imgUrl: "img/short-slider-rev-1-img-8.png",
+                            alt: "Slider-1-8"
+                        },
+                        {
+                            id: "slider1-9",
+                            imgUrl: "img/short-slider-rev-1-img-9.png",
+                            alt: "Slider-1-9"
+                        },
+                        {
+                            id: "slider1-10",
+                            imgUrl: "img/short-slider-rev-1-img-10.png",
+                            alt: "Slider-1-10"
+                        },
+                    ],
+                },
+                {
+                    title: "Our full folio full of <span>joy</span>",
+                    paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur ducimus dolorem commodi!",
+                    btnUrl: "#",
+                    class: "illustration2",
+                    images: [
+                        {
+                            id: "slider2-2",
+                            imgUrl: "img/short-slider-rev-1-img-2.png",
+                            alt: "Slider-2-2"
+                        },
+                        {
+                            id: "slider2-6",
+                            imgUrl: "img/short-slider-rev-1-img-6.png",
+                            alt: "Slider-2-6"
+                        },
+                        {
+                            id: "slider2-11",
+                            imgUrl: "img/h-2-slider-img-11.png",
+                            alt: "Slider-2-11"
+                        },
+                        {
+                            id: "slider2-12",
+                            imgUrl: "img/h-2-slider-img-12.png",
+                            alt: "Slider-2-12"
+                        },
+                        {
+                            id: "slider2-13",
+                            imgUrl: "img/h-2-slider-img-13.png",
+                            alt: "Slider-2-13"
+                        },
+                        {
+                            id: "slider2-14",
+                            imgUrl: "img/h-2-slider-img-14.png",
+                            alt: "Slider-2-14"
+                        },
+                    ],
+                },
+                {
+                    title: "Devotion that never <span>ends</span>",
+                    paragraph: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur ducimus dolorem commodi!",
+                    btnUrl: "#",
+                    class: "illustration3",
+                    images: [
+                        {
+                            id: "slider3-2",
+                            imgUrl: "img/short-slider-rev-1-img-2.png",
+                            alt: "Slider-3-2"
+                        },
+                        {
+                            id: "slider2-6",
+                            imgUrl: "img/short-slider-rev-1-img-6.png",
+                            alt: "Slider-3-6"
+                        },
+                        {
+                            id: "slider3-12",
+                            imgUrl: "img/h-2-slider-img-12.png",
+                            alt: "Slider-3-12"
+                        },
+                        {
+                            id: "slider3-13",
+                            imgUrl: "img/h-2-slider-img-13.png",
+                            alt: "Slider-3-13"
+                        },
+                        {
+                            id: "slider3-14",
+                            imgUrl: "img/h-2-slider-img-14.png",
+                            alt: "Slider-3-14"
+                        },
+                        {
+                            id: "slider3-15",
+                            imgUrl: "img/h-2-slider-img-15.png",
+                            alt: "Slider-3-15"
+                        },
+                        {
+                            id: "slider3-16",
+                            imgUrl: "img/h-2-slider-img-16.png",
+                            alt: "Slider-3-16"
+                        },
+                        {
+                            id: "slider3-17",
+                            imgUrl: "img/h-2-slider-img-17.png",
+                            alt: "Slider-3-17"
+                        },
+                    ],
+                },
+            ],
             galleryCards: [
                 {
                     imgUrl: "img/h-2-port-img-1.jpg",
@@ -295,7 +441,7 @@ var app = new Vue(
             nextImage: function () {
                 this.currentImage++;
 
-                if(this.currentImage > 2) {
+                if(this.currentImage > this.sliderElements.length - 1) {
                     this.currentImage = 0
                 }
             },
@@ -303,7 +449,7 @@ var app = new Vue(
                 this.currentImage--;
 
                 if(this.currentImage < 0) {
-                    this.currentImage = 2
+                    this.currentImage = this.sliderElements.length - 1
                 }
             },
         },
