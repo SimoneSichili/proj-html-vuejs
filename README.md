@@ -14,6 +14,6 @@
 
 ## Workflow
 **#1** Create a replica of Maree theme.  
-Orinal site: https://maree.qodeinteractive.com/  
+Original site: https://maree.qodeinteractive.com/  
 **#2** Use `Sass` for layout.  
 **#3** Fill navbar, footer and main content elements with `Vue.js`.  
